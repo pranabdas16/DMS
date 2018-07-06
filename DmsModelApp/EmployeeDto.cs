@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DmsModelApp
 {
-    class EmployeeDto
+   public class EmployeeDto
     {
         public int EmpID { get; set; }
 
@@ -14,7 +14,7 @@ namespace DmsModelApp
 
         public string LastName { get; set; }
 
-        public DateTime dob { get; set; }
+        public DateTime Dob { get; set; }
 
         public string PrimaryEmail { get; set; }
 
@@ -24,10 +24,10 @@ namespace DmsModelApp
 
         public string AddedByUser { get; set; }
 
-        public string AddedOn { get; set; }
+        public DateTime AddedOn { get; set; }
 
         public string UpdatedByUser { get; set; }
 
-        public string UpdatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
     }
 }
