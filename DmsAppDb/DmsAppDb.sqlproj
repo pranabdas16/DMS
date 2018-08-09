@@ -58,7 +58,4 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
-  <ItemGroup>
-    <Build Include="DmsAppTables.sql" />
-  </ItemGroup>
 </Project>

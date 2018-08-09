@@ -28,7 +28,7 @@ namespace DmsRepository
             }
         };
 
-            clubMembers.ForEach(category => context.EmmloyeeDto.Add(category));
+           // clubMembers.ForEach(category => context.EmmloyeeDto.Add(category));
         }
     }
 }
