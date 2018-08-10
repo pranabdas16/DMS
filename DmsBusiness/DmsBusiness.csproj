@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB0C9C12-9C9F-4490-BD63-3C2C95B2A629}</ProjectGuid>
+    <ProjectGuid>{20A3AF6C-830E-4135-96DA-15AFF50B1F41}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DmsRepository</RootNamespace>
-    <AssemblyName>DmsRepository</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>DmsBusiness</RootNamespace>
+    <AssemblyName>DmsBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,9 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,60 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DmsAppdbContext.cs" />
-    <Compile Include="DmsAppInitializer.cs" />
-    <Compile Include="DmsAppModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DmsAppModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DmsAppModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DmsAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DmsAppModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DmsAppModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DmsAppRepository.cs" />
-    <Compile Include="EmployeeAddUpdate.cs" />
-    <Compile Include="IDmsAppRepository.cs" />
-    <Compile Include="IEmployeeAddUpdate.cs" />
+    <Compile Include="EmployeeOper.cs" />
+    <Compile Include="IEmployeeOpr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <EntityDeploy Include="DmsAppModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DmsAppModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DmsAppModel.edmx.diagram">
-      <DependentUpon>DmsAppModel.edmx</DependentUpon>
-    </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DmsModelApp\DmsModelApp.csproj">
       <Project>{9be2fa83-f2c1-483f-bfb5-f1445737af36}</Project>
       <Name>DmsModelApp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DmsRepository\DmsRepository.csproj">
+      <Project>{ab0c9c12-9c9f-4490-bd63-3c2c95b2a629}</Project>
+      <Name>DmsRepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DmsAppModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DmsAppModel.edmx</DependentUpon>
-      <LastGenOutput>DmsAppModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DmsAppModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DmsAppModel.edmx</DependentUpon>
-      <LastGenOutput>DmsAppModel.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

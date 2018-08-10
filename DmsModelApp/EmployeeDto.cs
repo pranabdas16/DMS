@@ -9,7 +9,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DmsModelApp
 {
-   public class EmployeeDto
+    [Table("EmployeeDto")]
+    public class EmployeeDto
     {
         [Key]
         public int EmpID { get; set; }

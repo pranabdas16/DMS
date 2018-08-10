@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using DmsModelApp;
-using System.Data.Entity;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.Infrastructure;
 
@@ -14,7 +12,7 @@ namespace DmsRepository
 {
    public class DmsAppdbContext : DbContext
     {
-        public DmsAppdbContext() : base("DmsApp.DbConnection")
+        public DmsAppdbContext() : base("DmsAppDb")
         {
             Database.SetInitializer<DmsAppdbContext>(
                 null
@@ -28,7 +26,7 @@ namespace DmsRepository
         public DbSet<EmployeeDto> EmmloyeeDtos { get; set; }
         public DbSet<DepartmentDto> DepartmentDtos { get; set; }
         public DbSet<ProjectDto> ProjectDtos { get; set; }
-        public DbSet<ProjectRoleDto> RoleDtos { get; set; }
+        public DbSet<ProjectRoleDto> ProjectRoleDtos { get; set; }
     }
 
     

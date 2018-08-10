@@ -8,7 +8,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DmsModelApp
 {
-   public class ProjectRoleDto
+    [Table("ProjectRoleDto")]
+    public class ProjectRoleDto
     {
         [Key]
         public int ProjectRoleId { get; set; }
