@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DmsRepository;
 using DmsModelApp;
 using System.Transactions;
+using DmsBusiness;
 
 namespace DmsConsoleApp
 {
@@ -21,12 +22,20 @@ namespace DmsConsoleApp
             #region Employee adding and updating through Repository....
 
 
-            EmployeeAddUpdate obj = new EmployeeAddUpdate();
+            //EmployeeAddUpdate obj = new EmployeeAddUpdate();
 
 
-            obj.SaveEmployee();
+            //obj.SaveEmployee();
 
             Console.WriteLine("Data save through repository...");
+            #endregion
+
+            #region From business layer save employee
+
+            EmployeeOper objB = new EmployeeOper();
+
+            objB.SaveEmployee();
+
             #endregion
 
             //Below is working code commenting to have some new code added...

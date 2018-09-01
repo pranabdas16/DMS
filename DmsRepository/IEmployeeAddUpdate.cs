@@ -9,6 +9,6 @@ namespace DmsRepository
 {
    public interface IEmployeeAddUpdate
    {
-       void SaveEmployee();//EmployeeDto objEmployeeDto);
+       void SaveEmployee(EmployeeDto objEmployeeDto);
    }
 }

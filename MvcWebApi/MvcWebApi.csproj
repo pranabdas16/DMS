@@ -279,6 +279,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DmsBusiness\DmsBusiness.csproj">
+      <Project>{20a3af6c-830e-4135-96da-15aff50b1f41}</Project>
+      <Name>DmsBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DmsModelApp\DmsModelApp.csproj">
+      <Project>{9be2fa83-f2c1-483f-bfb5-f1445737af36}</Project>
+      <Name>DmsModelApp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

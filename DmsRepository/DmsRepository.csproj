@@ -70,8 +70,10 @@
     </Compile>
     <Compile Include="DmsAppRepository.cs" />
     <Compile Include="EmployeeAddUpdate.cs" />
+    <Compile Include="EmployeeGetRepo.cs" />
     <Compile Include="IDmsAppRepository.cs" />
     <Compile Include="IEmployeeAddUpdate.cs" />
+    <Compile Include="IEmployeeGetRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

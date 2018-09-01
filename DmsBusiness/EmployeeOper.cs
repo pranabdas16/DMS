@@ -10,7 +10,7 @@ using System.Data.Entity;
 
 namespace DmsBusiness
 {
-    public class EmployeeOper
+    public class EmployeeOper : IEmployeeOpr
     {
         public void SaveEmployee()
         {
@@ -20,25 +20,23 @@ namespace DmsBusiness
             {
                 var employeeinfo = new EmployeeDto()
                 {
-                    FirstName = "Bill",
-                    LastName = "Smith",
-                    Dob = new DateTime(1980, 1, 1),
+                    FirstName = "John",
+                    LastName = "Doe",
+                    Dob = new DateTime(1975, 1, 1),
                     Gender = 'M',
-                    AddedByUser = "Pranab Das",
-                    AddedOn = new DateTime(2018, 08, 03),
+                    AddedByUser = "Pranab",
+                    AddedOn = new DateTime(2018, 08, 13),
                     UpdatedByUser = "",
-                    UpdatedOn = new DateTime(2018, 08, 03),
+                    UpdatedOn = new DateTime(2018, 08, 13),
                     DepId = 111,
                     ProjectId = 111,
                     ProjectRoleId = 111
 
                 };
 
-                using (var context = new DmsAppdbContext())
-                {
-                    context.EmmloyeeDtos.Add(employeeinfo);
-                    context.SaveChanges();
-                };
+                EmployeeAddUpdate employeeAdd = new EmployeeAddUpdate();
+
+                employeeAdd.SaveEmployee(employeeinfo);
             }
             catch (Exception ex)
             {
@@ -47,6 +45,14 @@ namespace DmsBusiness
             }
 
             #endregion
+        }
+
+        public List<EmployeeDto> GetEmployee()
+        {
+            EmployeeGetRepo employeeGetRepo = new EmployeeGetRepo();
+            var employeeList = employeeGetRepo.GetEmployeeDetails().ToList();
+
+            return employeeList;
         }
     }
 }

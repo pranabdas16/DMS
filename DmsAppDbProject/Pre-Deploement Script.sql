@@ -151,22 +151,22 @@ use DmsAppDb
 
 --try
 --{
-Alter Table EmployeeDto
-Add Primary Key (EmpID), 
+--Alter Table EmployeeDto
+--Add Primary Key (EmpID), 
 
-Alter Table DepartmentDto
-Add Primary key (DepId);
+--Alter Table DepartmentDto
+--Add Primary key (DepId);
 
-Alter Table ProjectDto
-Add Primary Key (ProjectId);
+--Alter Table ProjectDto
+--Add Primary Key (ProjectId);
 
-Alter Table ProjectRoleDto
-Add Primary Key (ProjectRoleId);
+--Alter Table ProjectRoleDto
+--Add Primary Key (ProjectRoleId);
 
-Alter Table EmployeeDto
-Add constraint Fk_DepId Foreign key (DepId) References  DepartmentDto(DepId),
-constraint Fk_ProjectId Foreign Key (ProjectId) References ProjectDto (ProjectId),
-Constraint Fk_ProjectRoleId Foreign Key (ProjectRoleId) References ProjectRoleDto (ProjectRoleId);
+--Alter Table EmployeeDto
+--Add constraint Fk_DepId Foreign key (DepId) References  DepartmentDto(DepId),
+--constraint Fk_ProjectId Foreign Key (ProjectId) References ProjectDto (ProjectId),
+--Constraint Fk_ProjectRoleId Foreign Key (ProjectRoleId) References ProjectRoleDto (ProjectRoleId);
 
 
 insert into DepartmentDto values ( 'Other Department');

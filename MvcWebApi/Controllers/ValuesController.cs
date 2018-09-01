@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using DmsBusiness;
 
 namespace MvcWebApi.Controllers
 {
@@ -24,6 +25,8 @@ namespace MvcWebApi.Controllers
         // POST api/values
         public void Post([FromBody]string value)
         {
+            EmployeeOper obj = new EmployeeOper();
+            
         }
 
         // PUT api/values/5
