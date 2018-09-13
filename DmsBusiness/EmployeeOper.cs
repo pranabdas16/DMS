@@ -47,7 +47,7 @@ namespace DmsBusiness
             #endregion
         }
 
-        public List<EmployeeDto> GetEmployee()
+        public IEnumerable<EmployeeDto> GetEmployee()
         {
             EmployeeGetRepo employeeGetRepo = new EmployeeGetRepo();
             var employeeList = employeeGetRepo.GetEmployeeDetails().ToList();

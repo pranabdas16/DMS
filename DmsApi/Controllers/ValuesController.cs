@@ -6,17 +6,27 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Web.Http;
 using DmsBusiness;
+using DmsModelApp;
 
 namespace DmsApi.Controllers
 {
     public class ValuesController : ApiController
     {
+        public ValuesController()
+        {
+        }
+
         // GET api/values
-        public IEnumerable<Contact> Get()//string[] Get()
+        public IEnumerable<EmployeeDto> Get()//string[] Get()
         //public string[] Get()
         {
+            EmployeeOper employee = new EmployeeOper();
+            var obj = employee.GetEmployee();
+            return obj;
+
+
             //return  "Hello World to Api";
-            return GetAllContacts();
+            //return GetAllContacts();//Working code to get the value from GetAllContacts........
             //return contact();
             // return new string[] { "value1", "value2" };
         }
@@ -34,7 +44,7 @@ namespace DmsApi.Controllers
                 new Contact
                 {
                     Id = 1,
-                    Name = "Glenn Block"
+                    Name = "josh love"
                 },
                 new Contact
                 {
