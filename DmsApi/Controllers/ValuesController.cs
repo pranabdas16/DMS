@@ -19,7 +19,8 @@ namespace DmsApi.Controllers
         // GET api/values
         //public IEnumerable<Contact> Get()//string[] Get()
         public IEnumerable<EmployeeDto> Get()//string[] Get()
-        //public string[] Get()
+                                             //public string[] Get()
+
         {
             EmployeeOper employee = new EmployeeOper();
             var obj = employee.GetEmployee();
